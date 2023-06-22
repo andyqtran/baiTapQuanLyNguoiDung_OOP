@@ -97,6 +97,7 @@ domId("btnThem").onclick = function () {
     domId("btnCapNhat").classList.add("none");
     domId("btnThemND").classList.remove("none");
     domId("id").disabled = false;
+    domId("type").disabled = false;
     domId("modalForm").reset();
     renderModal();
     clearValid();
@@ -494,6 +495,7 @@ function editND(id) {
     let person = listPerson.findND(id);
     if (person) {
         domId("type").value = person.type;
+        domId("type").disabled = true;
         renderModal();
         domId("btnThemND").classList.add("none");
         domId("id").value = person.id;
